@@ -32,3 +32,11 @@ Content-type: application/json
     "name": "test product",
     "price": 10.02
 }
+
+###
+POST http://localhost:3000/kafka-clients
+Content-type: application/json
+
+{
+    "name": "test kafka"
+}

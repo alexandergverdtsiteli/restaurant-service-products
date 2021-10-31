@@ -22,6 +22,7 @@
     "typeorm": "ts-node ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
+    "kafkajs  ":"latest",
     "@grpc/proto-loader": "^0.6.4",
     "@nestjs/common": "^7.6.15",
     "@nestjs/config": "^0.6.3",

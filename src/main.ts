@@ -19,7 +19,17 @@ async function bootstrap() {
       protoPath: join(__dirname, 'products/proto/product.proto'),
     },
   });
-
+  app.connectMicroservice<MicroserviceOptions>({
+    transport: Transport.KAFKA,
+    options: {
+      client: {
+        brokers: ['host.docker.internal:9094']
+      },
+      consumer: {
+        groupId: 'nest-group1' + Math.random(),
+      }
+    }
+  })
   await app.startAllMicroservicesAsync();
   await app.listen(3000);
 }
